@@ -25,9 +25,7 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
-mongoose.connect(url, { useNewUrlParser: true });
-//mongoose.connect("mongodb+srv://philip:yelpcamp@cluster0.kofac.mongodb.net/test?retryWrites=true&w=majority");
-
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
