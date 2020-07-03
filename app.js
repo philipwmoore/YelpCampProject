@@ -22,8 +22,8 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
 //mongoose.connect("mongodb+srv://philip:yelpcamp@cluster0.kofac.mongodb.net/test?retryWrites=true&w=majority");
 
 
