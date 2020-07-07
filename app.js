@@ -24,7 +24,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+var url = process.env.DATABASEURL
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
